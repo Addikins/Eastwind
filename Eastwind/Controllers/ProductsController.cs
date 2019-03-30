@@ -7,21 +7,17 @@ using Microsoft.AspNetCore.Mvc;
 namespace Eastwind.Controllers
 {
     [Route("api/[controller]")]
-    public class SampleDataController : Controller
+    public class ProductsController : Controller
     {
-        private static string[] Summaries = new[]
+        [HttpGet]
+        public IEnumerable<Product> Products()
         {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        };
-
-        [HttpGet("[action]")]
-        public IEnumerable<Product> WeatherForecasts()
-        {
-            var rng = new Random();
+            var random = new Random();
             return Enumerable.Range(1, 5).Select(index => new Product
             {
                 Id = index,
-                Name = $"Product {index}"
+                Name = $"Product {index}",
+                Price = random.Next(10, 100)
             });
         }
 
@@ -29,7 +25,7 @@ namespace Eastwind.Controllers
         {
             public long Id { get; set; }
             public string Name { get; set; }
-
+            public decimal Price { get; set; }
         }
     }
 }

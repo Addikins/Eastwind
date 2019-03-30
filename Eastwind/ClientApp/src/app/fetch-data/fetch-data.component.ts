@@ -9,7 +9,7 @@ export class FetchDataComponent {
   public products: Product[];
 
   constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
-    http.get<Product[]>(baseUrl + 'api/SampleData/WeatherForecasts').subscribe(result => {
+    http.get<Product[]>(baseUrl + 'api/Products').subscribe(result => {
       this.products = result;
     }, error => console.error(error));
   }
@@ -18,4 +18,5 @@ export class FetchDataComponent {
 interface Product {
   id: number;
   name: string;
+  price: number;
 }
