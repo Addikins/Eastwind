@@ -3,7 +3,8 @@ import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-fetch-data',
-  templateUrl: './fetch-data.component.html'
+  templateUrl: './fetch-data.component.html',
+  styleUrls: ['./fetch-data.component.css']
 })
 export class FetchDataComponent {
   public products: Product[];
@@ -13,8 +14,11 @@ export class FetchDataComponent {
       this.products = result;
     }, error => console.error(error));
   }
-}
 
+  public click(product: Product) {
+    console.log("Clicked: ", product);
+  }
+}
 interface Product {
   id: number;
   name: string;

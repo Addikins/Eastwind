@@ -1,4 +1,4 @@
-<h1>Products</h1>
+<h1 id="colorClass">Products</h1>
 
 <p>This component demonstrates fetching data from the server.</p>
 
@@ -7,16 +7,16 @@
 <table class='table' *ngIf="products">
   <thead>
     <tr>
-      <th>Id</th>
-      <th>Name</th>
-      <th>Price</th>
+      <th id="colorClass">Id</th>
+      <th id="colorClass">Name</th>
+      <th id="colorClass">Price</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let product of products">
-      <td>{{ product.id }}</td>
-      <td>{{ product.name }}</td>
-      <td>{{ product.price }}</td>
+    <tr *ngFor="let product of products" (click)="click(product)">
+      <td id="colorClass">{{ product.id }}</td>
+      <td id="colorClass">{{ product.name }}</td>
+      <td id="colorClass">{{ product.price }}</td>
     </tr>
   </tbody>
 </table>
