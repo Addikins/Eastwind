@@ -17,15 +17,33 @@ namespace Eastwind.Controllers
             {
                 Id = index,
                 Name = $"Product {index}",
-                Price = random.Next(10, 100)
+                Price = random.Next(10, 100),
+                Quantity = random.Next(1, 10)
             });
         }
 
-        public class Product
+        [HttpGet("{id}")]
+        public Product Product(long id)
         {
-            public long Id { get; set; }
-            public string Name { get; set; }
-            public decimal Price { get; set; }
+            var random = new Random();
+            return new Product
+            {
+                Id = id,
+                Name = $"Product: {id}",
+                Price = random.Next(10, 100),
+                Quantity = random.Next(10),
+                Description = $"This is a placeholder for the description of product {id}"
+            };
         }
+
+
+    }
+    public class Product
+    {
+        public long Id { get; set; }
+        public string Name { get; set; }
+        public decimal Price { get; set; }
+        public int Quantity { get; set; }
+        public string Description { get; set; }
     }
 }

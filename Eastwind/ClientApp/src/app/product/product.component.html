@@ -1,3 +1,25 @@
-<p>
-  product works!
-</p>
+<h1 *ngIf="product" class="colorClass">{{product.name}}</h1>
+
+<p *ngIf="!product"><em>Loading...</em></p>
+
+<table  class='table' *ngIf="product">
+  <thead>
+    <tr>
+      <th class="colorClass">Id</th>
+      <th class="colorClass">Name</th>
+      <th class="colorClass">Price</th>
+      <th class="colorClass">Quantity</th>
+    </tr>
+  </thead>
+  <tbody class='tableColor'>
+    <tr>
+      <td class="colorClass">{{ product.id }}</td>
+      <td class="colorClass">{{ product.name }}</td>
+      <td class="colorClass">{{ product.price }}</td>
+      <td class="colorClass">{{ product.quantity }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 class="colorClass">Description</h2>
+<p class="colorClass paragraph">{{product.description}}</p>

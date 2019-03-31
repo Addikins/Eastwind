@@ -28,7 +28,7 @@ import { ProductComponent } from './product/product.component';
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
-      { path: 'product', component: ProductComponent }
+      { path: 'product/:id', component: ProductComponent }
     ])
   ],
   providers: [],
