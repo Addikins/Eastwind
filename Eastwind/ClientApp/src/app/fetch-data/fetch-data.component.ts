@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./fetch-data.component.css']
 })
 export class FetchDataComponent {
+  
   public products: Product[];
 
   constructor(http: HttpClient, private router: Router, @Inject('BASE_URL') baseUrl: string) {
