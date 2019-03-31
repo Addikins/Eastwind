@@ -19,9 +19,11 @@ export class CategoriesComponent implements OnInit {
   ngOnInit() {
 
   }
+  public click(category: Category) {
+    this.router.navigateByUrl('category/' + category.id);
+  }
 }
 interface Category {
   id: number;
   name: string;
-  description: string;
 }

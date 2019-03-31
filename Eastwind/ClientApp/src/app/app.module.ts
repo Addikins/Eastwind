@@ -11,6 +11,7 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { ProductComponent } from './product/product.component';
 import { CategoriesComponent } from './categories/categories.component';
+import { CategoryComponent } from './category/category.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CategoriesComponent } from './categories/categories.component';
     CounterComponent,
     FetchDataComponent,
     ProductComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    CategoryComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -31,7 +33,8 @@ import { CategoriesComponent } from './categories/categories.component';
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'product/:id', component: ProductComponent },
-      { path: 'categories', component: CategoriesComponent }
+      { path: 'categories', component: CategoriesComponent },
+      { path: 'category/:id', component: CategoryComponent }
     ])
   ],
   providers: [],

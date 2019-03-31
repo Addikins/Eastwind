@@ -1,24 +1,26 @@
-<h1 class="colorClass">Products</h1>
+<div class="backgroundColor">
+<h1 class="hText">Products</h1>
 
-<p>This component demonstrates fetching data from the server.</p>
+<p class="pText">This component demonstrates fetching data from the server.</p>
 
 <p *ngIf="!products"><em>Loading...</em></p>
 
 <table class='table' *ngIf="products">
   <thead>
     <tr>
-      <th class="colorClass">Id</th>
-      <th class="colorClass">Name</th>
-      <th class="colorClass">Price</th>
-      <th class="colorClass">Quantity</th>
+      <th class="pText">Id</th>
+      <th class="pText">Name</th>
+      <th class="pText">Price</th>
+      <th class="pText">Quantity</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody class="breakColor">
     <tr *ngFor="let product of products" (click)="click(product)">
-      <td class="colorClass">{{ product.id }}</td>
-      <td class="colorClass">{{ product.name }}</td>
-      <td class="colorClass">{{ product.price }}</td>
-      <td class="colorClass">{{ product.quantity }}</td>
+      <td class="pText">{{ product.id }}</td>
+      <td class="pText">{{ product.name }}</td>
+      <td class="pText">{{ product.price }}</td>
+      <td class="pText">{{ product.quantity }}</td>
     </tr>
   </tbody>
 </table>
+</div>

@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { HttpClient } from '@angular/common/http'
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-product',
