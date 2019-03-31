@@ -23,4 +23,5 @@ export class CategoriesComponent implements OnInit {
 interface Category {
   id: number;
   name: string;
+  description: string;
 }

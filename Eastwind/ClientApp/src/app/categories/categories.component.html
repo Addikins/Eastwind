@@ -1,3 +1,16 @@
-<p>
-  categories works!
-</p>
+<h1 class="colorClass">List of Categories:</h1>
+
+<table class='table' *ngIf="categories">
+  <thead>
+    <tr>
+      <th class="colorClass">Id</th>
+      <th class="colorClass">Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let category of categories" (click)="click(category)">
+      <td class="colorClass">{{ category.id }}</td>
+      <td class="colorClass">{{ category.name }}</td>
+    </tr>
+  </tbody>
+</table>

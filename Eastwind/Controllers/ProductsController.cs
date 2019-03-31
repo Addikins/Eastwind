@@ -39,6 +39,7 @@ namespace Eastwind.Controllers
 
 
     }
+    [Route("api/[controller]")]
     public class CategoriesController : Controller
     {
         [HttpGet]
