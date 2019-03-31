@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+.backgroundColor {
+    background-color: #1F282B
+}
+.pText {
+        color: #AFBDA4
+}
+.hText {
+    color: #7d8568
+}
+p { font-size: 20px;
+}
+.breakColor {
+    background-color: #660D23
+}
