@@ -22,7 +22,6 @@ namespace Eastwind.Controllers
                 Quantity = random.Next(1, 10)
             });
         }
-
         [HttpGet("{id}")]
         public Product Product(long id)
         {
@@ -36,7 +35,5 @@ namespace Eastwind.Controllers
                 Description = $"This is a placeholder for the description of product {id}"
             };
         }
-
-
     }
 }

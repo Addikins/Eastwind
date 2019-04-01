@@ -12,6 +12,8 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { ProductComponent } from './product/product.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { CategoryComponent } from './category/category.component';
+import { SuppliersComponent } from './suppliers/suppliers.component';
+import { SupplierComponent } from './supplier/supplier.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { CategoryComponent } from './category/category.component';
     FetchDataComponent,
     ProductComponent,
     CategoriesComponent,
-    CategoryComponent
+    CategoryComponent,
+    SuppliersComponent,
+    SupplierComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -34,7 +38,9 @@ import { CategoryComponent } from './category/category.component';
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'product/:id', component: ProductComponent },
       { path: 'categories', component: CategoriesComponent },
-      { path: 'category/:id', component: CategoryComponent }
+      { path: 'category/:id', component: CategoryComponent },
+      { path: 'suppliers', component: SuppliersComponent },
+      { path: 'supplier/:id', component: SupplierComponent}
     ])
   ],
   providers: [],

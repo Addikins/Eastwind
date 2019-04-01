@@ -1,0 +1,24 @@
+<div class="backgroundColor">
+
+  <h1 *ngIf="supplier" class="hText">{{supplier.name}}</h1>
+
+  <h1 *ngIf="!supplier"><em>Loading...</em></h1>
+
+  <table class="table" *ngIf="supplier">
+    <thead>
+      <tr>
+        <th class="pText">Id</th>
+        <th class="pText">Name</th>
+      </tr>
+    </thead>
+
+    <tbody class="breakColor">
+      <tr>
+        <td class="pText">{{ supplier.id }}</td>
+        <td class="pText">{{ supplier.name }}</td>
+      </tr>
+    </tbody>
+    <h2 class="hText">Description</h2>
+    <p class="pText">{{supplier.description}}</p>
+  </table>
+</div>

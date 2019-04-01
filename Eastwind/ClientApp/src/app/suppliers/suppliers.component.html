@@ -1,0 +1,19 @@
+<div class="backgroundColor">
+
+  <h1 class="hText">Supplier List</h1>
+
+  <table class='table' *ngIf="suppliers">
+    <thead>
+      <tr>
+        <th class="pText">Id</th>
+        <th class="pText">Name</th>
+      </tr>
+    </thead>
+    <tbody class="breakColor">
+      <tr *ngFor="let supplier of suppliers" (click)="click(supplier)">
+        <td class="pText">{{ supplier.id }}</td>
+        <td class="pText">{{ supplier.name }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

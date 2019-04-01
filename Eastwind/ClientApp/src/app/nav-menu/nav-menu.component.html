@@ -32,6 +32,10 @@
                     <a [routerLink]='["/categories"]' (click)='collapse()'>
                         <span class='glyphicon glyphicon-th-list'></span> Categories
                     </a>
+                </li><li [routerLinkActive]='["link-active"]'>
+                    <a [routerLink]='["/suppliers"]' (click)='collapse()'>
+                        <span class='glyphicon glyphicon-th-list'></span> Suppliers
+                    </a>
                 </li>
             </ul>
         </div>

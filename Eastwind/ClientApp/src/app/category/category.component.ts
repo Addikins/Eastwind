@@ -25,10 +25,9 @@ public category: Category;
   console.log(result);
   }, error => console.error(error));
   }
-  
 }
+
   interface Category {
     id: number;
     name: string;
   }
-
