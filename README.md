@@ -1,2 +1,2 @@
 # Eastwind
-Introduction to using ASP.Net/Angular frameworks
+Making conflicts on purpose!
