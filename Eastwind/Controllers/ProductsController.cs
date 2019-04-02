@@ -30,7 +30,7 @@ namespace Eastwind.Controllers
             {
                 Id = id,
                 Name = $"Product: {id}",
-                Price = random.Next(10, 100), 
+                Price = random.Next(10, 100),
                 Quantity = random.Next(10),
                 Description = $"This is a placeholder for the description of product {id}"
             };
