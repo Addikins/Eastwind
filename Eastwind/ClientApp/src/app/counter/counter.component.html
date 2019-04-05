@@ -1,7 +1,14 @@
-<h1 class="hText">Counter</h1>
+<h1 class="hText">Simple Counter</h1>
 
-<p class="pText">This is a simple example of an Angular component.</p>
+<p class="pText">This is a basic counter that can count by any real number. </p>
 
-<p class="pText">Current count: <strong>{{ currentCount }}</strong></p>
+<div>
+<p class="pText">Current count: <strong>{{ currentCount }}</strong></p> 
+</div>
 
+<form>
 <button (click)="incrementCounter()">Increment</button>
+<button (click)="resetCounter()">Reset</button>
+<label for="increments" class="pText">Count by:</label>
+<input type="number" id="increments" name="increments" min="-10000" max="10000" value="1">
+</form>
