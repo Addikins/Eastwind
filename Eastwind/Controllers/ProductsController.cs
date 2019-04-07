@@ -1,9 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using Eastwind.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Eastwind.Controllers
 {
@@ -22,6 +21,7 @@ namespace Eastwind.Controllers
                 Quantity = random.Next(1, 10)
             });
         }
+
         [HttpGet("{id}")]
         public Product Product(long id)
         {
