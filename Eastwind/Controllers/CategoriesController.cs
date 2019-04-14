@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.AspNetCore.Mvc;
 using Eastwind.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Eastwind.Controllers
 {
@@ -16,9 +16,10 @@ namespace Eastwind.Controllers
             return Enumerable.Range(1, 5).Select(index => new Category
             {
                 Id = index,
-                Name = $"Category {index}",
+                Name = $"Category {index}"
             });
         }
+
         [HttpGet("{id}")]
         public Category Category(long id)
         {

@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.AspNetCore.Mvc;
 using Eastwind.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Eastwind.Controllers
 {
@@ -19,6 +19,7 @@ namespace Eastwind.Controllers
                 Name = $"Supplier {index}"
             });
         }
+
         [HttpGet("{id}")]
         public Supplier Supplier(long id)
         {
